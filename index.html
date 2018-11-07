@@ -31,7 +31,7 @@
     var vw = window.innerWidth;
 var vh = window.innerHeight;    
         
-var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create, update: update, render: render });
+var game = new Phaser.Game(vw, vh, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 
 function preload() {
 
@@ -63,7 +63,7 @@ function create() {
 
 
 
-vbtcd= game.add.sprite(vw/2, vh/2+vh/2*0.4, 'btcd');
+vbtcd= game.add.sprite(vw/2, vh/2+vh/2*0.4, 'player');
 vbtcd.anchor.set(1);
  vbtcd.fixedToCamera = true;
 
@@ -72,7 +72,7 @@ vbtcd.anchor.set(1);
 
 
 
-vbtci= game.add.sprite(vw/2-vw*0.2, vh/2+vh/2*0.4, 'btcd');
+vbtci= game.add.sprite(vw/2-vw*0.2, vh/2+vh/2*0.4, 'player');
 vbtci.anchor.set(0.5);
 vbtci.rotation=Math.PI;
  vbtci.fixedToCamera = true;
